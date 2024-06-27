@@ -160,8 +160,4 @@ table {
       display: flex;
     }
   }
-  #total {
-    font-size: 1.5em;
-    margin: 0.5em;
-  }
 }

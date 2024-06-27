@@ -126,13 +126,15 @@ export const Form = () => {
         <table id="result">
           <thead>
             {formdatas.length > 0 ? (
-              <p>
-                Existe un total de: <b id="total">{formdatas.length}</b>
-              </p>
+              <tr>
+                <th>Existe un total de: {formdatas.length}</th>
+              </tr>
             ) : (
-              <p style={{ color: "red" }}>
-                No hay datos, ingrese datos para ver resultados.
-              </p>
+              <tr>
+                <th style={{ color: "red" }}>
+                  No hay datos, ingrese datos para ver resultados.
+                </th>
+              </tr>
             )}
             <tr>
               <th>Nombre</th>
