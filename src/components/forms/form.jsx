@@ -62,7 +62,9 @@ export const Form = () => {
   return (
     <>
       <header className="headersearch">
-        <span className="material-symbols-outlined">search</span>
+        <span className="material-symbols-outlined" id="logosearch">
+          search
+        </span>
         <input
           type="search"
           className="search"
@@ -127,16 +129,16 @@ export const Form = () => {
           <thead>
             {formdatas.length > 0 ? (
               <tr>
-                <th>Existe un total de: {formdatas.length}</th>
+                <th id="total">Existe un total de: {formdatas.length}</th>
               </tr>
             ) : (
               <tr>
-                <th style={{ color: "red" }}>
+                <th style={{ color: "red" }} id="nohay">
                   No hay datos, ingrese datos para ver resultados.
                 </th>
               </tr>
             )}
-            <tr>
+            <tr id="tablaN">
               <th>Nombre</th>
               <th>Edad</th>
               <th>Correo</th>
@@ -149,7 +151,7 @@ export const Form = () => {
                 <td>{form.nombre ? truncar(form.nombre) : ""}</td>
                 <td>{form.edad}</td>
                 <td>{form.correo}</td>
-                <td>
+                <td id="botontotal">
                   {edit === index ? (
                     <button id="botones" onClick={handleUpdate}>
                       Actualizar
